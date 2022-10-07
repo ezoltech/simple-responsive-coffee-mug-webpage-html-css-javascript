@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>RA & AD</title>
+</head>
+
+<body class="bgchanger">
+    <section>
+        <div class="circle"></div>
+        <header>
+
+            <h3>RA & AD</h3>
+
+            <ul class="navbar">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">what's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="toggle" onclick="toggletransition();"></div>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>designed for your<br><span class="main">convenience</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, modi ducimus voluptatem exercitationem sequi ipsum ratione, fugit necessitatibus illum dicta enim velit beatae.</p>
+                <a href="#" class="first_button">Learn More</a>
+                <a href="#" class="button">Order Now</a>
+            </div>
+            <div class="imgBx">
+                <img src="image-removebg-preview (1).png" class="raad">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="image-removebg-preview (1).png" onclick="image_convertor('image-removebg-preview (1).png');circlebg_changer(' rgb(20, 43, 89)');changefontcolor(' rgb(20, 43, 89)');changetextcolor(' rgb(20, 43, 89)');changebuttoncolor(' rgb(20, 43, 89)')"></li>
+            <li><img src="image (5).png" onclick="image_convertor('image (5).png');circlebg_changer('#000');changefontcolor('#000');changetextcolor('#000');changebuttoncolor('#000');background_convertor('bg2.jpg')"></li>
+            <li><img src="image (7).png" onclick="image_convertor('image (7).png');circlebg_changer('rgb(229, 42, 42)');changefontcolor('rgb(229, 42, 42)');changetextcolor('rgb(229, 42, 42)');changebuttoncolor('rgb(229, 42, 42)');background_convertor('bg3.jpg')"></li>
+        </ul>
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="facebook.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="telegram.png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function image_convertor(mylists) {
+            document.querySelector('.raad').src = mylists;
+
+        }
+
+        function circlebg_changer(circle_color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = circle_color;
+        }
+
+        function changefontcolor(font_colour) {
+            const font = document.querySelector('.main');
+            font.style.color = font_colour;
+        }
+
+        function changetextcolor(text_color) {
+            const text = document.querySelector('.button');
+            text.style.background = text_color;
+        }
+
+        function changebuttoncolor(button_color) {
+            const button = document.querySelector('.first_button');
+            button.style.background = button_color;
+        }
+
+        function toggletransition() {
+            var togglemenu = document.querySelector('.toggle');
+            var navbar = document.querySelector('.navbar');
+            togglemenu.classList.toggle('active')
+            navbar.classList.toggle('active')
+        }
+
+        function background_convertor(main_bg) {
+            const convertor = document.querySelector('.first_button');
+            convertor.style.background = main_bg;
+
+        }
+    </script>
+</body>
+
+</html>
